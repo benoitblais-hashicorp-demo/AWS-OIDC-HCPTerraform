@@ -16,7 +16,7 @@ resource "aws_iam_openid_connect_provider" "tfc_provider" {
   thumbprint_list = [data.tls_certificate.tfc_certificate.certificates[0].sha1_fingerprint]
 
   lifecycle {
-    ignore_changes = [ tags ] # This is because this resource is managed outside of Terraform.
+    ignore_changes = [tags] # This is because this resource is managed outside of Terraform.
   }
 }
 

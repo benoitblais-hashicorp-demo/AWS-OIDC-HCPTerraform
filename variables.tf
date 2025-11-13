@@ -7,13 +7,13 @@ variable "tfc_organization_name" {
 variable "tfc_project_name" {
   description = "(Required) The name of the HCP Terraform project."
   type        = string
-  default     ="*"
+  default     = "*"
 }
 
 variable "tfc_workspace_name" {
   description = "(Required) The name of the HCP Terraform workspace."
   type        = string
-  default     ="*"
+  default     = "*"
 }
 
 variable "tfc_hostname" {

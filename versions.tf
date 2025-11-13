@@ -2,14 +2,14 @@
 
 terraform {
 
-  cloud { 
-    
-    organization = "benoitblais-hashicorp" 
+  cloud {
 
-    workspaces { 
-      name = "aws-oidc-hcpterraform" 
-    } 
-  } 
+    organization = "benoitblais-hashicorp"
+
+    workspaces {
+      name = "aws-oidc-hcpterraform"
+    }
+  }
 
   required_providers {
     aws = {
