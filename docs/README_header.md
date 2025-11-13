@@ -6,7 +6,7 @@ Code which manages configuration and life-cycle of the AWS OIDC for HCP Terrafor
 
 ### AWS Permission
 
-To manage resources, provide credentials with appropriate permissions. 
+To manage resources, provide credentials with appropriate permissions.
 
 * You need permissions to create an OpenID Connect (OIDC) identity provider in AWS IAM. This
 typically requires actions like `iam:CreateOpenIDConnectProvider` and `iam:AddClientIDToOpenIDConnectProvider`.
