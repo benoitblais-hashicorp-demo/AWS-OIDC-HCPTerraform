@@ -23,7 +23,7 @@ resource "aws_iam_openid_connect_provider" "tfc_provider" {
 # The following resource block is used to create an IAM OpenID Connect provider resource.
 
 resource "aws_iam_role" "hcp_terraform" {
-  name = "tfc-${var.tfc_organization_name}"
+  name = var.aws_role_name != null ? var.aws_role_name : "tfc-${var.tfc_organization_name}"
 
   assume_role_policy = <<EOF
 {
@@ -41,6 +41,9 @@ resource "aws_iam_role" "hcp_terraform" {
        },
        "StringLike": {
          "${var.tfc_hostname}:sub": "organization:${var.tfc_organization_name}:project:${var.tfc_project_name}:workspace:${var.tfc_workspace_name}:run_phase:*"
+       },
+       "StringLike": {
+         "${var.tfc_hostname}:sub": ""organization:${var.tfc_organization_name}:project:${var.tfc_stack_project_name}:stack:${var.tfc_stack_name}:*""
        }
      }
    }
