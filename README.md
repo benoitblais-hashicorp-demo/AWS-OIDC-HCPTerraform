@@ -60,6 +60,14 @@ No required inputs.
 
 The following input variables are optional (have default values):
 
+### <a name="input_aws_role_name"></a> [aws\_role\_name](#input\_aws\_role\_name)
+
+Description: (Optional) Name for the IAM role to be used, unique within your account
+
+Type: `string`
+
+Default: `null`
+
 ### <a name="input_tfc_hostname"></a> [tfc\_hostname](#input\_tfc\_hostname)
 
 Description: (Optional) The address of the HCP Terraform instance.
@@ -70,7 +78,7 @@ Default: `"app.terraform.io"`
 
 ### <a name="input_tfc_organization_name"></a> [tfc\_organization\_name](#input\_tfc\_organization\_name)
 
-Description: (Required) The name of the HCP Terraform organization.
+Description: (Optional) The name of the HCP Terraform organization.
 
 Type: `string`
 
@@ -78,7 +86,23 @@ Default: `"benoitblais-hashicorp"`
 
 ### <a name="input_tfc_project_name"></a> [tfc\_project\_name](#input\_tfc\_project\_name)
 
-Description: (Required) The name of the HCP Terraform project.
+Description: (Optional) The name of the HCP Terraform project.
+
+Type: `string`
+
+Default: `"*"`
+
+### <a name="input_tfc_stack_name"></a> [tfc\_stack\_name](#input\_tfc\_stack\_name)
+
+Description: (Optional) The name of the HCP Terraform Stack.
+
+Type: `string`
+
+Default: `"*"`
+
+### <a name="input_tfc_stack_project_name"></a> [tfc\_stack\_project\_name](#input\_tfc\_stack\_project\_name)
+
+Description: (Optional) The name of the HCP Terraform Stack project.
 
 Type: `string`
 
